@@ -19,6 +19,3 @@ module.exports.deleteReview = async (req, res) => {
   req.flash("success", "Deleted a new review!");
   res.redirect(`/campgrounds/${id}`);
 };
-
-
-
