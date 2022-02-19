@@ -31,7 +31,18 @@
         />
         <div class="valid-feedback">Looks good!</div>
       </div>
-      <input type="file" name="image" id="" multiple />
+      <div class="mb-3">
+        <div class="mb-3 custom-file">
+          <label for="image" class="form-label">Choose image(s)</label>
+          <input
+            class="custom-file-label form-control"
+            type="file"
+            id="image"
+            name="image"
+            multiple
+          />
+        </div>
+      </div>
       <div class="mb-3">
         <label for="price" class="form-label">Campground Price</label>
         <div class="input-group">
@@ -49,6 +60,7 @@
           <div class="valid-feedback">Looks good!</div>
         </div>
       </div>
+
       <div class="mb-3">
         <label for="description" class="form-label">Description</label>
         <textarea
