@@ -8,7 +8,6 @@ const map = new mapboxgl.Map({
 
 map.addControl(new mapboxgl.NavigationControl());
 
-
 map.on("load", () => {
   // Add a new source from our GeoJSON data and
   // set the 'cluster' option to true. GL-JS will
@@ -105,10 +104,7 @@ map.on("load", () => {
       coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
     }
 
-    new mapboxgl.Popup()
-      .setLngLat(coordinates)
-      .setHTML(text)
-      .addTo(map);
+    new mapboxgl.Popup().setLngLat(coordinates).setHTML(text).addTo(map);
   });
 
   map.on("mouseenter", "clusters", () => {
