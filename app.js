@@ -1,8 +1,7 @@
-if (process.env.NODE_ENV !== "production") {
-  require("dotenv").config();
-}
 
-require("dotenv").config();
+if (process.env.NODE_ENV !== "production") {
+  require('dotenv').config();
+}
 
 const express = require("express");
 const path = require("path");
@@ -29,11 +28,15 @@ const reviewRoutes = require("./routes/reviews");
 const MongoDBStore = require("connect-mongo")(session);
 
 const dbUrl = process.env.DB_URL || "mongodb://localhost:27017/yelp-camp";
-const secret = process.env.SECRET || "thisisasecret";
-// "mongodb://localhost:27017/yelp-camp"
-// mongoose.connect(dbUrl);
 
-mongoose.connect(dbUrl);
+const secret = process.env.SECRET || "thisisasecret";
+
+mongoose.connect(dbUrl, {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false
+});
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -120,7 +123,7 @@ app.use(
         "'self'",
         "blob:",
         "data:",
-        "https://res.cloudinary.com/dsxptrywr/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT!
+        "https://res.cloudinary.com/dsxptrywr/",
         "https://images.unsplash.com/",
       ],
       fontSrc: ["'self'", ...fontSrcUrls],
