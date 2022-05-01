@@ -16,7 +16,6 @@ https://aqueous-dawn-39753.herokuapp.com/
     * Create, edit and delete posts and comments
     * Upload campground photos
     * Display campground location on MapBox
-    * Search existing campgrounds
 
 * Manage user account with basic functionalities
     * Flash messages responding to users' interaction with the app
