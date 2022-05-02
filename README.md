@@ -24,8 +24,7 @@ https://aqueous-dawn-39753.herokuapp.com/
 
 
 
-## Composition
-YelpCamp uses:
+## Technologies used
 - MongoDB
 - Mongoose
 - Express
