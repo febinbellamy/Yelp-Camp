@@ -35,3 +35,5 @@ YelpCamp uses:
 - CSS
 - Passport
 - Mapbox API
+- Cloudinary
+- Heroku
